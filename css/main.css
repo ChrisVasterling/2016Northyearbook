@@ -1,0 +1,67 @@
+/*
+BLUE: rgb(0,120,200)
+RED: rgb(215, 10, 45)
+*/
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400);
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+a {
+    text-decoration: none;
+}
+button {
+    outline: none;
+}
+hr {
+    display:block; 
+	border:0px solid transparent; 
+	border-top:3px solid rgba(215, 10, 45, 1);
+	transition: width 300ms ease-out, opacity 200ms ease-out;
+	transform: translate3d(0px, 0px, 0);
+}
+::selection {
+    background-color: rgba(215, 10, 45, 1);
+    color: white;
+}
+.navMain {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    transform: translate3d(0px, 0px, 0px);
+    transition: transform 300ms ease-out;
+    width: 250px;
+    max-width: 90%;
+    height: 100%;
+    display: block;
+    background-color: rgba(175, 175, 175, 0.8);
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.navMainLinks {
+    width: 100%;
+    height: auto;
+}
+.navHr {
+    width: 10%;
+}
+.navMainLinks > button {
+    width: auto;
+    max-width: 90%;
+    border: 0px;
+    background-color: rgba(0,120,200, 0.7);
+    font-family: Lato;
+    font-size: 25px;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    margin: 10px 0px 10px 0px;
+}
+.NHSLogo {
+    width: 100%;
+}
