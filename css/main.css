@@ -29,7 +29,7 @@ hr {
     position: fixed;
     top: 0px;
     left: 0px;
-    transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(-250px, 0px, 0px);
     transition: transform 300ms ease-out;
     width: 250px;
     max-width: 90%;
@@ -39,6 +39,7 @@ hr {
     text-align: center;
     overflow-x: hidden;
     overflow-y: auto;
+    z-index:10;
 }
 .navMainLinks {
     width: 100%;
@@ -60,4 +61,34 @@ hr {
 }
 .NHSLogo {
     width: 100%;
+}
+.header {
+    width:100%;
+    height: auto;
+    background-color: rgb(215, 10, 45);
+    position: fixed;
+}
+.openMenu {
+    border: 0px;
+    height: 50px;
+    width: 50px;
+    padding: 0px 5px 0px 5px;
+    background-color: transparent;
+    cursor: pointer;
+    float:left;
+}
+.openMenu > .bar {
+    width: 100%;
+    height: 10%;
+    margin: 15% 0% 15% 0%;
+    background-color: black;
+}
+.cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display:none;
+    background-color: transparent;
+    transition: background-color 300ms ease-out;
+    z-index: 9;
 }

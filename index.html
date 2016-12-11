@@ -7,41 +7,55 @@
         <script src="js/main.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta name="theme-color" content="#0078C8"/>
+        <!--  Load multiple images quickly
+        <script>
+            window.addEventListener('load', function () {
+                body = document.getElementById('body');
+                for (i = 1; i <= 14; i++) {
+                    body.innerHTML += '<img src="img/fall/fall_sports/' + i + '_opt.jpg"/>'
+                };
+            })
+        </script>
+        -->
     </head>
-    <body>
+    <body id='body'>
         <nav class='navMain' id='navMain'>
             <img src="img/NHSLogo.jpg" class='NHSLogo'/>
             <hr style='width: 30%'/>
             <div class='navMainLinks'>
-                <button id='schoolDances' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id), closeMenu()">
+                <button id='schoolDances' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id), closeMenu(400)">
                     School Dances
                 </button>
                 <hr style="width:0%; margin-top:-10px;" id="schoolDancesHr"></hr>
                 <hr class='navHr'/>
-                <button id='seniorStudents' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id), closeMenu()">
+                <button id='seniorStudents' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id), closeMenu(400)">
                     Senior Students
                 </button>
                 <hr style="width:0%; margin-top:-10px;" id="seniorStudentsHr"></hr>
                 <hr class='navHr'/>
-                <button id='juniorStuednts' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id), closeMenu()">
+                <button id='juniorStuednts' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id), closeMenu(400)">
                     Junior Students
                 </button>
                 <hr style="width:0%; margin-top:-10px;" id="juniorStuedntsHr"></hr>
                 <hr class='navHr'/>
-                <button id='sophomoreStudents' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id), closeMenu()">
+                <button id='sophomoreStudents' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id), closeMenu(400)">
                     Sophomore Students
                 </button>
                 <hr style="width:0%; margin-top:-10px;" id="sophomoreStudentsHr"></hr>
                 <hr class='navHr'/>
-                <button id='freshmenStudents' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id), closeMenu()">
+                <button id='freshmenStudents' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id), closeMenu(400)">
                     Freshmen Students
                 </button>
                 <hr style="width:0%; margin-top:-10px;" id="freshmenStudentsHr"></hr>
             </div>
         </nav>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <div class='header'>
+            <button class='openMenu' onmousedown="openMenu()">
+                <div class='bar'></div>
+                <div class='bar'></div>
+                <div class='bar'></div>
+            </button>
+        </div>
+        <div class='cover' id='cover' onmousedown="closeMenu(0)"></div>
     </body>
 </html>
