@@ -12,14 +12,18 @@ function bottomSlide(btn) {
 	}, 400)
 }
 function closeMenu(cover_delay) {
-    var menu = document.getElementById('navMain');
+    var menu = document.getElementById('navMain'),
+        bdy = document.getElementById('body');
     setTimeout( function() {
+        bdy.style.overflow = 'auto'
         menu.style.transform = 'translate3d(-250px, 0px, 0px)';
         closeMenuCover();
     }, cover_delay)
 }
 function openMenu() {
-    var menu = document.getElementById('navMain');
+    var menu = document.getElementById('navMain'),
+        bdy = document.getElementById('body');
+    bdy.style.overflow = 'hidden';
     menu.style.transform = 'translate3d(0px, 0px, 0px)';
     openMenuCover();
 }
@@ -37,10 +41,27 @@ function openMenuCover() {
         cvr.style.backgroundColor = 'rgba(0, 0, 0, .75)';
     }, 0)
 }
-function JSLink(btn) {
-    url = document.getElementById(btn).dataset.url
-    setTimeout( function() {
-        window.location = url
-    }, 800)
+function JSLink(btn, IntExt, delay) {
+    if (IntExt == 'external') {
+        var url = document.getElementById(btn).dataset.url;
+        setTimeout( function() {
+            window.location = url
+        }, delay)
+    } else if (IntExt == 'internal') {
+        var location = document.getElementById(btn).dataset.linkId,
+            section = document.getElementById(location).offsetTop;
+        setTimeout( function() {
+            window.scrollTo(0, section);
+        }, delay)
+    };
     
 }
+window.addEventListener('scroll', function() {
+    var seasonTop = document.getElementById('seasonButtons'),
+        seasonButtons = document.getElementById('seasonButtons');
+    if (window.scrollY >= seasonTop.offsetTop + 20 + seasonTop.offsetHeight) {
+        document.getElementById('backToTop').style.display = 'block';
+    } else {
+        document.getElementById('backToTop').style.display = 'none';
+    }
+});

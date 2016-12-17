@@ -23,27 +23,27 @@
             <img src="img/NHSLogo.jpg" class='NHSLogo'/>
             <hr style='width: 30%'/>
             <div class='navMainLinks'>
-                <button id='schoolDances' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id), closeMenu(400)">
+                <button id='schoolDances' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id, 'external', 800), closeMenu(400)">
                     School Dances
                 </button>
                 <hr style="width:0%; margin-top:-10px;" id="schoolDancesHr"></hr>
                 <hr class='navHr'/>
-                <button id='seniorStudents' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id), closeMenu(400)">
+                <button id='seniorStudents' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id, 'external', 800), closeMenu(400)">
                     Senior Students
                 </button>
                 <hr style="width:0%; margin-top:-10px;" id="seniorStudentsHr"></hr>
                 <hr class='navHr'/>
-                <button id='juniorStuednts' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id), closeMenu(400)">
+                <button id='juniorStuednts' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id, 'external', 800), closeMenu(400)">
                     Junior Students
                 </button>
                 <hr style="width:0%; margin-top:-10px;" id="juniorStuedntsHr"></hr>
                 <hr class='navHr'/>
-                <button id='sophomoreStudents' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id), closeMenu(400)">
+                <button id='sophomoreStudents' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id, 'external', 800), closeMenu(400)">
                     Sophomore Students
                 </button>
                 <hr style="width:0%; margin-top:-10px;" id="sophomoreStudentsHr"></hr>
                 <hr class='navHr'/>
-                <button id='freshmenStudents' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id), closeMenu(400)">
+                <button id='freshmenStudents' data-url='html/' onmousedown="bottomSlide(this.id), JSLink(this.id, 'external', 800), closeMenu(400)">
                     Freshmen Students
                 </button>
                 <hr style="width:0%; margin-top:-10px;" id="freshmenStudentsHr"></hr>
@@ -56,6 +56,113 @@
                 <div class='bar'></div>
             </button>
         </div>
+        <div class='headerSpacing'></div>
         <div class='cover' id='cover' onmousedown="closeMenu(0)"></div>
+        <button data-link-id='body' class='backToTop' id='backToTop' onmousedown="JSLink(this.id, 'internal', 0)">
+            Back
+            <br/>
+            To
+            <br/>
+            Top
+        </button>
+        <div class='content'>
+            <p style='font-size: 45px; padding: 10px 0px 10px 10px; margin: 0px; background-color: rgba(0,120,200, .7);'>2016 North Yearbook</p>
+            <div class='yearbookSection'>
+                <div id='seasonButtons'>
+                    <button data-link-id="fallSection" class='seasonLink' id='fallButton' onmousedown="JSLink(this.id, 'internal', 0)">
+                        Fall
+                    </button>
+                    <button data-link-id="winterSection" class='seasonLink' id='winterButton' onmousedown="JSLink(this.id, 'internal', 0)">
+                        Winter
+                    </button>
+                    <button data-link-id="springSection" class='seasonLink' id='springButton' onmousedown="JSLink(this.id, 'internal', 0)">
+                        Spring
+                    </button>
+                </div>
+                <br/>
+                <div class='yearbookSlide' id='fallSection'>
+                    <img src="img/fall/fall_opt.jpg"/>
+                    <br/>
+                    <a href="img/fall/fall.jpg" target="_blank" style='text-decoration: underline; font-size: 125%;'>View Fall Image</a>
+                    <br/>
+                    <div class='yearbookButtons'>
+                        <a href="#">
+                            <button class='yearbookButton'>
+                                Fall Sports
+                            </button>
+                        </a>
+                        <a href="#">
+                            <button class='yearbookButton'>
+                                Homecoming
+                            </button>
+                        </a>
+                        <a href="#">
+                            <button class='yearbookButton'>
+                                Student Life
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class='yearbookSlide' id='winterSection'>
+                    <img src="img/winter/winter_opt.jpg"/>
+                    <br/>
+                    <a href="img/winter/winter.jpg" target="_blank" style='text-decoration: underline; font-size: 125%;'>View Winter Image</a>
+                    <br/>
+                    <div class='yearbookButtons'>
+                        <a href="#">
+                            <button class='yearbookButton'>
+                                Winter Sports
+                            </button>
+                        </a>
+                        <a href="#">
+                            <button class='yearbookButton'>
+                                Winter Carnival
+                            </button>
+                        </a>
+                        <a href="#">
+                            <button class='yearbookButton'>
+                                Student Life
+                            </button>
+                        </a>
+                        <a href="#">
+                            <button class='yearbookButton'>
+                                Performing Arts
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class='yearbookSlide' id='springSection'>
+                    <img src="img/spring/spring_opt.jpg"/>
+                    <br/>
+                    <a href="img/spring/spring.jpg" target="_blank" style='text-decoration: underline; font-size: 125%;'>View Spring Image</a>
+                    <br/>
+                    <div class='yearbookButtons'>
+                        <a href="#">
+                            <button class='yearbookButton'>
+                                Spring Sports
+                            </button>
+                        </a>
+                        <a href="#">
+                            <button class='yearbookButton'>
+                                Prom
+                            </button>
+                        </a>
+                        <a href="#">
+                            <button class='yearbookButton'>
+                                Student Life
+                            </button>
+                        </a>
+                        <a href="#">
+                            <button class='yearbookButton'>
+                                Group Photos
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
     </body>
 </html>
