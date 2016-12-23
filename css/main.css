@@ -1,6 +1,7 @@
 /*
 BLUE: rgba(0, 120, 200, 1)
 RED: rgba(215, 10, 45, 1)
+YEARBOOK HEIGHT: 650px
 */
 @import url(https://fonts.googleapis.com/css?family=Lato:400);
 html, body {
@@ -75,6 +76,19 @@ hr {
     overflow: hidden;
     z-index: 9;
 }
+.homeButton {
+    height: 100%; 
+    border:0px; 
+    background-color: rgba(215, 10, 45, 1);
+    transition: background-color 150ms ease-out;
+    cursor:pointer;
+    font-family: Lato;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.homeButton:hover {
+    background-color: rgba(0, 120, 200, 1);
+}
 .headerSpacing {
     padding-top: 50px
 }
@@ -128,6 +142,13 @@ hr {
     text-align: center;
     font-family: Lato;
     font-weight: 400;
+    margin-bottom: 120px;
+}
+.yearbookImage {
+    height:450px;
+    max-width: 350px;
+    margin: 10px;
+    cursor: pointer;
 }
 .yearbookSection {
     overflow: auto;
@@ -144,7 +165,7 @@ hr {
     width: calc(100% - 20px);
     margin: 10px;
 }
-.yearbookButton, .seasonLink {
+.yearbookButton, .shortcutLink {
     width: 90%;
     max-width: 300px;
     font-family: Lato;
@@ -157,14 +178,34 @@ hr {
     background-color: rgba(0,120,200, .8);
     transition: background-color 150ms ease-out;
 }
-.seasonLink {
+.sectionHeader {
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    width: 80%;
+    display: inline-block;
+    background-color: rgba(0, 120, 200, .8)
+}
+.shortcutLink {
     width: 90%;
     max-width: 250px;
     background-color: rgba(215, 10, 45, .8);
 }
-.seasonLink:hover {
+.shortcutLink:hover {
     background-color: rgba(0,120,200, 1);
 }
 .yearbookButton:hover {
     background-color: rgba(215, 10, 45, 1);
+}
+@media screen and (max-width: 820px) {
+    .yearbookImage {
+        height: 350px;
+        width: 275px;
+    }
+}
+@media screen and (max-width: 660px) {
+    .yearbookImage {
+        width: 80%;
+        height: auto;
+    }
 }

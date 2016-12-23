@@ -47,6 +47,9 @@ function JSLink(btn, IntExt, delay) {
         setTimeout( function() {
             window.location = url
         }, delay)
+    } else if (IntExt == 'newTab') {
+        var url = document.getElementById(btn).dataset.url;
+        window.open(url)
     } else if (IntExt == 'internal') {
         var location = document.getElementById(btn).dataset.linkId,
             section = document.getElementById(location).offsetTop;
@@ -57,9 +60,9 @@ function JSLink(btn, IntExt, delay) {
     
 }
 window.addEventListener('scroll', function() {
-    var seasonTop = document.getElementById('seasonButtons'),
+    var content = document.getElementById('content'),
         seasonButtons = document.getElementById('seasonButtons');
-    if (window.scrollY >= seasonTop.offsetTop + 20 + seasonTop.offsetHeight) {
+    if (window.scrollY >= content.offsetTop) {
         document.getElementById('backToTop').style.display = 'block';
     } else {
         document.getElementById('backToTop').style.display = 'none';
