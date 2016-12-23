@@ -9,7 +9,7 @@
 		<meta name="theme-color" content="#0078C8"/>
         <script>
             window.addEventListener('load', function () {
-                var S = document.getElementById('sophomores');
+                var location = document.getElementById('sophomores');
                 /*Student Pics*/
                 for (i = 1; i <= 10; i++) {
                     var img = document.createElement('img'),
@@ -19,7 +19,7 @@
                     img.setAttribute('id', 'img' + i);
                     img.setAttribute('data-url', imgSrc + i + '.jpg');
                     img.setAttribute('onclick', "JSLink(this.id, 'newTab', 0)");
-                    S.appendChild(img);
+                    location.appendChild(img);
                 }
             })
         </script>

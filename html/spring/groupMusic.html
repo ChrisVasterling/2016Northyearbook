@@ -9,11 +9,11 @@
 		<meta name="theme-color" content="#0078C8"/>
         <script>
             window.addEventListener('load', function () {
-                var location = document.getElementById('sports');
+                var location = document.getElementById('groupPhotos');
                 /*Student Pics*/
-                for (i = 1; i <= 18; i++) {
+                for (i = 2; i <= 7; i++) {
                     var img = document.createElement('img'),
-                        imgSrc = '../../img/winter/winter_sports/';
+                        imgSrc = '../../img/spring/group_photos/music/';
                     img.src = imgSrc + i + '_small.jpg';
                     img.setAttribute('class', 'yearbookImage');
                     img.setAttribute('id', 'img' + i);
@@ -83,10 +83,16 @@
         </button>
         <div class='content' id='content'>
             <p style='font-size: 35px; padding: 10px 0px 10px 10px; margin: 0px; background-color: rgba(0,120,200, .7);'>
-                Winter Sports
+                Group Photos - Music
             </p>
             <div class='yearbookSection'>
-                <div id='sports'></div>
+                <div id='groupPhotos'></div>
+                <img src="../../img/spring/group_photos/music/8_small.jpg"
+                     class="yearbookImage"
+                     style="height: auto;"
+                     data-url="../../img/spring/group_photos/music/8.jpg"
+                     id="football"
+                     onclick="JSLink(this.id, 'newTab', 0)"/>
             </div>
             <p style='padding: 10px; font-size: 20px; background-color: rgba(215, 10, 45, .8);'>
                 This website was created and designed by

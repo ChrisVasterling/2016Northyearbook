@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2016 North Yearbooks</title>
+        <link rel="stylesheet" type="text/css" href="../../css/main.css"/>
+        <link rel="icon" href="../../img/icon.ico"/>
+        <script src="../../js/main.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="theme-color" content="#0078C8"/>
+        <script>
+            window.addEventListener('load', function () {
+                var location = document.getElementById('studentLife');
+                /*Student Pics*/
+                for (i = 1; i <= 16; i++) {
+                    var img = document.createElement('img'),
+                        imgSrc = '../../img/winter/student_life/';
+                    img.src = imgSrc + i + '_small.jpg';
+                    img.setAttribute('class', 'yearbookImage');
+                    img.setAttribute('id', 'img' + i);
+                    img.setAttribute('data-url', imgSrc + i + '.jpg');
+                    img.setAttribute('onclick', "JSLink(this.id, 'newTab', 0)");
+                    location.appendChild(img);
+                }
+            })
+        </script>
+    </head>
+    <body id='body'>
+        <nav class='navMain' id='navMain'>
+            <img src="../../img/NHSLogo.jpg" class='NHSLogo'/>
+            <hr style='width: 30%'/>
+            <div class='navMainLinks'>
+                <button id='schoolDances' data-url='../dances.html' onmousedown="bottomSlide(this.id), JSLink(this.id, 'external', 800), closeMenu(400)">
+                    School Dances
+                </button>
+                <hr style="width:0%; margin-top:-10px;" id="schoolDancesHr"></hr>
+                <hr class='navHr'/>
+                <button id='seniorStudents' data-url='../seniors.html' onmousedown="bottomSlide(this.id), JSLink(this.id, 'external', 800), closeMenu(400)">
+                    Senior Students
+                </button>
+                <hr style="width:0%; margin-top:-10px;" id="seniorStudentsHr"></hr>
+                <hr class='navHr'/>
+                <button id='juniorStudents' data-url='../juniors.html' onmousedown="bottomSlide(this.id), JSLink(this.id, 'external', 800), closeMenu(400)">
+                    Junior Students
+                </button>
+                <hr style="width:0%; margin-top:-10px;" id="juniorStudentsHr"></hr>
+                <hr class='navHr'/>
+                <button id='sophomoreStudents' data-url='../sophomores.html' onmousedown="bottomSlide(this.id), JSLink(this.id, 'external', 800), closeMenu(400)">
+                    Sophomore Students
+                </button>
+                <hr style="width:0%; margin-top:-10px;" id="sophomoreStudentsHr"></hr>
+                <hr class='navHr'/>
+                <button id='freshmenStudents' data-url='../freshmen.html' onmousedown="bottomSlide(this.id), JSLink(this.id, 'external', 800), closeMenu(400)">
+                    Freshmen Students
+                </button>
+                <hr style="width:0%; margin-top:-10px;" id="freshmenStudentsHr"></hr>
+                <hr class='navHr'/>
+                <button id='staff' data-url='../staff.html' onmousedown="bottomSlide(this.id), JSLink(this.id, 'external', 800), closeMenu(400)">
+                    Staff
+                </button>
+                <hr style="width:0%; margin-top:-10px;" id="staffHr"></hr>
+            </div>
+            <hr style='width: 70%'/>
+            <img src="../../img/YB_small.jpg" style='width: 50%'/>
+        </nav>
+        <div class='header'>
+            <button class='openMenu' onmousedown="openMenu()">
+                <div class='bar'></div>
+                <div class='bar'></div>
+                <div class='bar'></div>
+            </button>
+            <button class="homeButton" id="home" data-url="../../index.html" onclick="JSLink(this.id, 'external', 150)">
+                Home
+            </button>
+        </div>
+        <div class='headerSpacing'></div>
+        <div class='cover' id='cover' onmousedown="closeMenu(0)"></div>
+        <button data-link-id='body' class='backToTop' id='backToTop' onmousedown="JSLink(this.id, 'internal', 0)">
+            Back
+            <br/>
+            To
+            <br/>
+            Top
+        </button>
+        <div class='content' id='content'>
+            <p style='font-size: 35px; padding: 10px 0px 10px 10px; margin: 0px; background-color: rgba(0,120,200, .7);'>
+                Winter Student Life
+            </p>
+            <div class='yearbookSection'>
+                <div id='studentLife'></div>
+            </div>
+            <p style='padding: 10px; font-size: 20px; background-color: rgba(215, 10, 45, .8);'>
+                This website was created and designed by
+                <br/>
+                <a href="http://chrisvasterling.weebly.com" target="_blank" style='font-weight: bold; text-decoration: underline'>
+                    Christopher Vasterling
+                </a>
+            </p>
+        </div>
+    </body>
+</html>
