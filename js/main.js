@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-    
+    addBackButton()
 });
 function bottomSlide(btn) {
 	var btnId = document.getElementById(btn + "Hr"),
@@ -50,6 +50,8 @@ function JSLink(btn, IntExt, delay) {
     } else if (IntExt == 'newTab') {
         var url = document.getElementById(btn).dataset.url;
         window.open(url)
+    } else if (IntExt == 'back') {
+        window.history.back()
     } else if (IntExt == 'internal') {
         var location = document.getElementById(btn).dataset.linkId,
             section = document.getElementById(location).offsetTop;
@@ -68,3 +70,13 @@ window.addEventListener('scroll', function() {
         document.getElementById('backToTop').style.display = 'none';
     }
 });
+function addBackButton() {
+    var header = document.getElementById('header'),
+        back = document.createElement('button');
+    back.setAttribute('class', 'backButton');
+    back.setAttribute('id', 'backButton');
+    back.setAttribute('onclick', "JSLink(this.id, 'back', 150)");
+    back.style.float = 'right';
+    back.innerHTML = 'Back';
+    header.appendChild(back)
+}

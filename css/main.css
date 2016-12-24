@@ -76,7 +76,7 @@ hr {
     overflow: hidden;
     z-index: 9;
 }
-.homeButton {
+.homeButton, .backButton {
     height: 100%; 
     border:0px; 
     background-color: rgba(215, 10, 45, 1);
@@ -84,9 +84,9 @@ hr {
     cursor:pointer;
     font-family: Lato;
     font-size: 20px;
-    margin-left: 10px;
+    margin: 0px 10px 0px 10px;
 }
-.homeButton:hover {
+.homeButton:hover, .backButton:hover {
     background-color: rgba(0, 120, 200, 1);
 }
 .headerSpacing {
