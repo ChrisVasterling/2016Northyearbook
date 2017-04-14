@@ -146,7 +146,7 @@ hr {
 }
 .yearbookImage {
     height:450px;
-    max-width: 350px;
+    width: 350px; /*max-*/
     margin: 10px;
     cursor: pointer;
 }
